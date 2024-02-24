@@ -35,10 +35,10 @@
 
 Contracts & purpose - 
 1. Diamond Proxy - 
-    - This contract is central proxy of delegating calls to respective facet
-    - It utilized 'LIbDiamond.sol' as storage 
-    - Saves record of implementations for each function selector
-    - DiamondProxy.sol
+- This contract is central proxy of delegating calls to respective facet
+- It utilized ' LIbDiamond.sol ' as storage 
+- Saves record of implementations for each function selector
+- DiamondProxy.sol
 2. Diamond loupe contract 
     - This is standard getter function to get facet addresses and other facet related data from 'LibDiamond.sol'
     - DiamondLoupeFacet.sol
