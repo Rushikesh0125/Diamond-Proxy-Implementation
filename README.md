@@ -34,31 +34,35 @@
 ### Project Contains following contracts
 
 Contracts & purpose - 
-1. Diamond Proxy - 
-- This contract is central proxy of delegating calls to respective facet
-- It utilized ' LIbDiamond.sol ' as storage 
-- Saves record of implementations for each function selector
-- DiamondProxy.sol
-2. Diamond loupe contract 
-    - This is standard getter function to get facet addresses and other facet related data from 'LibDiamond.sol'
-    - DiamondLoupeFacet.sol
-3. Diamond Cut contract 
+1. Diamond Proxy - **DiamondProxy.sol**
+    - This contract is central proxy of delegating calls to respective facet
+    - It utilized **LIbDiamond.sol** as storage 
+    - Saves record of implementations for each function selector
+      
+2. Diamond loupe contract **DiamondLoupeFacet.sol**
+    - This is standard getter function to get facet addresses and other facet related data from **LibDiamond.sol**
+    - Returns
+          _ facet addresses
+          _ facet for particular selector
+          _ selctors present in particular facet
+3. Diamond Cut contract
+    - This contract is implementation of adding, removing, replacing facets and selectors
     - DiamondCutFacet.sol
-4. STK token 
+5. STK token 
     - STKBase.Sol
     - STKTokenFacet.sol
-5. Staking contract
+6. Staking contract
     - Staking Facet
-6. Buy STK token 
+7. Buy STK token 
     - BuyStkFacet.sol
-7. Ownership
+8. Ownership
     - OwnerFacet.sol
-8. Storage contracts 
+9. Storage contracts 
     - LibDiamond
     - LibBuyStk
     - LibSTKToken
     - LibStaking
-9. Interfaces 
+10. Interfaces 
     - IDiamondCut.sol
     - IDiamondLoupe.sol
     - IERC165.sol
