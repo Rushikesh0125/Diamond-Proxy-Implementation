@@ -19,3 +19,12 @@
     |_ test
       |_ Contains all Unit tests
 
+## Commands
+### To install dependencies
+> make install
+
+### To build contracts
+> forge build
+
+### To test contracts
+> forge test
