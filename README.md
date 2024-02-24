@@ -1,66 +1,21 @@
-## Foundry
+## Wasserstoff-Task-2
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+**Proxy Contract for Load Balancing and Function Delegation [Diamond Proxy Pattern eip-2535].**
 
-Foundry consists of:
+## Project Structure ->
+    |-lib
+    |-script
+    |-src
+      |_ Facets
+        |_ contains all Facet "*Implementation*" contracts
+      |_ Interface
+        |_ contains all Facet "*Interface*" contracts
+      |_ Libraries
+        |_ contains all Facet "*Storage*" contracts
+      |_ UpgradeInit
+        |_ Upgrade contract - "supported interface checks"
+      |_ utils
+       |_ DiamondProxy.sol
+    |_ test
+      |_ Contains all Unit tests
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
-
-## Documentation
-
-https://book.getfoundry.sh/
-
-## Usage
-
-### Build
-
-```shell
-$ forge build
-```
-
-### Test
-
-```shell
-$ forge test
-```
-
-### Format
-
-```shell
-$ forge fmt
-```
-
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
