@@ -55,7 +55,7 @@ contract BuyStkTest is BaseDiamondTest {
 
         buyStkFacet = new BuyStkFacet();
 
-        /// add STK Token facet cut to diamond
+        
         bytes4[] memory buyStkSelectors = new bytes4[](7);
         buyStkSelectors[0] = BuyStkFacet.addLiquidity.selector;
         buyStkSelectors[1] = BuyStkFacet.buySTK.selector;

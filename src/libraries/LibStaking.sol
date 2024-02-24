@@ -34,6 +34,12 @@ library StakingStorage {
         StakingStorage.layout().totalStakedSTK += _amount;
     }
 
+    function calculateRewards(uint256 _amount, uint256 timePeriod) internal view returns(uint256){
+        require(timePeriod > 1 days, "StakingLib: Stake for atleast one day");
+        uint256 stakedForDays = timePeriod/ 1 days;
+        uint256 rewardPerDay = StakingStorage.layout().aprRate*_amount*1000/365;
+        return (rewardPerDay*stakedForDays)/100000;
+    }
 
     function layout() internal pure returns (Layout storage l) {
         bytes32 position = _STAKING_STORAGE_SLOT;
