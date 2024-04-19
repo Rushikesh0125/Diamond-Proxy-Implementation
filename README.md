@@ -1,6 +1,4 @@
-## Wasserstoff-Task-2
-
-**Proxy Contract for Load Balancing and Function Delegation [Diamond Proxy Pattern eip-2535].**
+## Diamond proxy
 
 ## Project Structure ->
     |-lib
